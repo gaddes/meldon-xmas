@@ -4,10 +4,13 @@ const storeController = require('../controllers/storeController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 const reviewController = require('../controllers/reviewController');
+const homeController = require('../controllers/homeController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
 // Do work here
-router.get('/', catchErrors(storeController.getStores)); // catchErrors() wrapper used whenever our function is async - see getStores() defined in storeController.js
+// router.get('/', catchErrors(storeController.getStores)); // catchErrors() wrapper used whenever our function is async - see getStores() defined in storeController.js
+router.get('/', homeController.homePage);
+router.post('/', homeController.homePage);
 router.get('/stores', catchErrors(storeController.getStores));
 router.get('/add', authController.isLoggedIn, storeController.addStore);
 router.post('/add',

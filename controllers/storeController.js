@@ -57,6 +57,10 @@ exports.getStores = async (req, res) => {
     res.render('stores', { title: 'Stores', stores });
 };
 
+exports.showHome = (req, res) => {
+    res.render('home', { title: 'Home' });
+};
+
 const confirmOwner = (store, user) => {
     if (!store.author.equals(user._id)) {
         throw Error('You must own a store in order to edit it!');

@@ -1,4 +1,8 @@
 extends layout
 
+include mixins/_reminderForm
+
 block content
-    p hi
+    .inner
+        h2= title
+        +reminderForm()
