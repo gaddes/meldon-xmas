@@ -6,7 +6,6 @@ exports.homePage = (req, res) => {
 };
 
 exports.createReminder = async (req, res) => {
-    console.log(req.body);
     const reminder = await (new Reminder(req.body)).save();
     req.flash('success', `Successfully created reminder '${reminder.name}'.`);
     res.redirect(`/`);
