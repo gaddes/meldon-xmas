@@ -1,9 +1,9 @@
-mixin reminderForm()
+mixin reminderForm(reminder = {})
     form.form(action="/" method="POST")
-        label(for="reminder-text") WHAT would you like to be reminded about?
-        input(type="text" name="reminder-text")
-        label(for="reminder-date") WHEN would you like to be reminded?
-        input(type="date" name="reminder-date")
+        label(for="name") WHAT would you like to be reminded about?
+        input(type="text" name="name" value=reminder.name)
+        //- label(for="reminder-date") WHEN would you like to be reminded?
+        //- input(type="date" name="reminder-date")
         p 
         input.button(type="submit" value="Create Reminder")
 

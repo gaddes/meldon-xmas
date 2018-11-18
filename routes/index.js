@@ -8,9 +8,9 @@ const homeController = require('../controllers/homeController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
 // Do work here
-// router.get('/', catchErrors(storeController.getStores)); // catchErrors() wrapper used whenever our function is async - see getStores() defined in storeController.js
-router.get('/', homeController.homePage);
-router.post('/', homeController.homePage);
+router.get('/', catchErrors(homeController.getReminders)); // catchErrors() wrapper used whenever our function is async - see getReminders() defined in homeController.js
+router.post('/', catchErrors(homeController.createReminder));
+
 router.get('/stores', catchErrors(storeController.getStores));
 router.get('/add', authController.isLoggedIn, storeController.addStore);
 router.post('/add',

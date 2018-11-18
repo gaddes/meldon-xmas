@@ -1,8 +1,12 @@
 extends layout
 
 include mixins/_reminderForm
+include mixins/_reminders
 
 block content
     .inner
-        h2= title
+        h2 Enter a New Reminder
+        //- pre= h.dump(reminder);
         +reminderForm()
+        h2 List of Existing Reminders
+        +reminders()
