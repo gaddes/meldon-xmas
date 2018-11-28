@@ -63,10 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
+<<<<<<< HEAD
 /* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -98,18 +99,20 @@ exports.$$ = $$;
 <<<<<<< HEAD
 
 /***/ }),
+=======
+/* 0 */,
+>>>>>>> wip
 /* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+// Webpack searches for this file when we run 'npm start'
+// Even though this file is empty and should be deleted,
+// It's late and I'm fed up of coding,
+// So it's easier to leave this file in place to prevent crashes on startup
 
 
+<<<<<<< HEAD
 __webpack_require__(1);
 
 var _bling = __webpack_require__(0);
@@ -2832,6 +2835,8 @@ __webpack_require__(1);
 var _bling = __webpack_require__(0);
 >>>>>>> wip
 
+=======
+>>>>>>> wip
 /***/ })
 /******/ ]);
 //# sourceMappingURL=App.bundle.js.map
