@@ -95,6 +95,7 @@ NodeList.prototype.on = NodeList.prototype.addEventListener = function (name, fn
 
 exports.$ = $;
 exports.$$ = $$;
+<<<<<<< HEAD
 
 /***/ }),
 /* 1 */
@@ -1215,11 +1216,23 @@ exports.default = typeAhead;
 
 /***/ }),
 /* 16 */
+=======
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 2 */
+>>>>>>> wip
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+<<<<<<< HEAD
 var utils = __webpack_require__(4);
 var bind = __webpack_require__(11);
 var Axios = __webpack_require__(18);
@@ -2813,6 +2826,11 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     return DOMPurify;
 });
+=======
+__webpack_require__(1);
+
+var _bling = __webpack_require__(0);
+>>>>>>> wip
 
 /***/ })
 /******/ ]);
