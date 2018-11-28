@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Reminder = mongoose.model('Reminder'); // See Store.js where this is exported!
+const Reminder = mongoose.model('Reminder'); // See Reminder.js where this is exported!
 
 exports.homePage = (req, res) => {
     res.render('index', { title: 'Homepage' });
