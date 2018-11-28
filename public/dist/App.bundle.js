@@ -2800,11 +2800,9 @@ var _map = __webpack_require__(11);
 
 var _map2 = _interopRequireDefault(_map);
 
-var _heart = __webpack_require__(34);
-
-var _heart2 = _interopRequireDefault(_heart);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import ajaxHeart from './modules/heart';
 
 (0, _autocomplete2.default)((0, _bling.$)('#address'), (0, _bling.$)('#lat'), (0, _bling.$)('#lng'));
 
@@ -2813,48 +2811,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _map2.default)((0, _bling.$)('#map'));
 
 var heartForms = (0, _bling.$$)('form.heart');
-heartForms.on('submit', _heart2.default);
-
-/***/ }),
-/* 33 */,
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _axios = __webpack_require__(3);
-
-var _axios2 = _interopRequireDefault(_axios);
-
-var _bling = __webpack_require__(2);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function ajaxHeart(e) {
-    var _this = this;
-
-    e.preventDefault(); // Stop form from submitting itself - we want to take over this functionality with JavaScript (vs. allowing the browser to do this)
-    _axios2.default.post(this.action).then(function (res) {
-        // Update colour of store heart icon depending on whether it is hearted
-        var isHearted = _this.heart.classList.toggle('heart__button--hearted');
-        // Update number associated with heart icon on navbar
-        (0, _bling.$)('.heart-count').textContent = res.data.hearts.length;
-        // Fun floaty functionality
-        if (isHearted) {
-            _this.heart.classList.add('heart__button--float');
-            setTimeout(function () {
-                return _this.heart.classList.remove('heart__button--float');
-            }, 2500);
-        }
-    }).catch(console.error);
-}
-
-exports.default = ajaxHeart;
+heartForms.on('submit', ajaxHeart);
 
 /***/ })
 /******/ ]);
