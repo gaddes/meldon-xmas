@@ -1,8 +1,8 @@
 mixin reminderForm(reminder = {})
     form.form(action="/" method="POST")
-        label(for="name") WHAT would you like to be reminded about?
-        input(type="text" name="name" value=reminder.name)
+        label(for="name") What should we buy...?
+        input(type="text" name="name" placeholder="mulled wine, mince pies, christmas crackers..." value=reminder.name)
         //- label(for="reminder-date") WHEN would you like to be reminded?
         //- input(type="date" name="reminder-date")
         p 
-        input.button(type="submit" value="Create Reminder")
+        input.button(type="submit" value="Add item")

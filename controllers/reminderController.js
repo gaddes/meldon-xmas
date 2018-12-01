@@ -7,7 +7,7 @@ exports.homePage = (req, res) => {
 
 exports.createReminder = async (req, res) => {
     const reminder = await (new Reminder(req.body)).save();
-    req.flash('success', `Successfully created reminder '${reminder.name}'.`);
+    req.flash('success', `Successfully added '${reminder.name}'`);
     res.redirect(`/`);
     // Note: errors are handled within the exports.catchErrors() function in errorHandlers.js - see video 11 @ 12mins for explanation
 };
@@ -15,6 +15,6 @@ exports.createReminder = async (req, res) => {
 exports.getReminders = async (req, res) => {
     // Query the database for a list of all reminders
     const reminders = await Reminder.find();
-    console.log(reminders);
-    res.render('index', { title: 'Homepage', reminders });
+    // console.log(reminders);
+    res.render('index', { title: '', reminders });
 };

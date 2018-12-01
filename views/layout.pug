@@ -1,9 +1,9 @@
 doctype html
 html
   head
-    title= `${title} | ${h.siteName}`
+    title= `${title} ${h.siteName}`
     link(rel='stylesheet', href='/dist/style.css')
-    link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    link(rel="shortcut icon" type="image/png" href="/images/icons/xmas-tree.png")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
     block header
@@ -12,7 +12,7 @@ html
           .nav__section.nav__section--pages
             li.nav__item
               a.nav__link.nav__link--logo(href="/")
-                p Reminders Homepage
+                p Homepage
     block messages
       if locals.flashes
         .inner
