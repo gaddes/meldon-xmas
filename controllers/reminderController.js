@@ -18,3 +18,13 @@ exports.getReminders = async (req, res) => {
     // console.log(reminders);
     res.render('index', { title: '', reminders });
 };
+
+exports.deleteReminder = async (req, res) => {
+  console.log("deleteReminder is working!");
+  console.log(req.body);
+  console.log(req.params);
+  const reminder = await Reminder.deleteOne({_id: req.params.id});
+  req.flash('info', 'Successfully deleted!');
+  console.log(reminder);
+  res.redirect('/');
+};

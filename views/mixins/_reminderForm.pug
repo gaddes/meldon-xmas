@@ -6,3 +6,8 @@ mixin reminderForm(reminder = {})
         //- input(type="date" name="reminder-date")
         p 
         input.button(type="submit" value="Add item")
+    form.form(action=`/${reminder._id}` method="POST")
+        label(for="id") What should we delete...?
+        input(type="text" name="id" placeholder="type ID here..." value=reminder._id)
+        p
+        input.button(type="submit" value="Delete item")

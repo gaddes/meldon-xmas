@@ -1,5 +1,35 @@
+//- mixin reminders()
+//-     form.form()
+//-         ul
+//-         each reminder in reminders
+//-             li= reminder.name
+
+//- mixin reminders(reminder = {})
+//-   form.form()
+//-     each reminder in reminders
+//-       p.
+//-         #{reminder.name} #[button Delete]
+//-       style.
+//-         button {
+//-           float: right;
+//-         }
+
+//- mixin reminders()
+//-   form.form()
+//-     each reminder in reminders
+//-       p.
+//-         #{reminder.name} #[button(formaction=`/${reminder._id}` method="POST" type="submit" name="id" value=reminder._id) Delete]
+//-       style.
+//-         button {
+//-           float: right;
+//-         }
+
 mixin reminders()
-    form.form()
-        ul
-        each reminder in reminders
-            li= reminder.name
+  form.form()
+    each reminder in reminders
+      p.
+        #{reminder.name} #[button(formaction=`/${reminder._id}` method="GET" type="submit") Delete]
+      style.
+        button {
+          float: right;
+        }
